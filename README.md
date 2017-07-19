@@ -91,6 +91,10 @@ del d["key"]        # Python
 delete(d, "key")    # Go
 ```
 
+### Conditionals
+
+Conditionals are mostly similar in Python and Go with some differences. `if/elif/else` in Python, `if/else if/else` in Go. Go allows excuting initial statements at the begininng of the for loop. Look this up)
+
 ### Looping
 
 Python supports `for` an `while` loops. Go only has one looping construct i.e. the `for` loop. Unlike Python, the `for` loop in Go has 3 components separated by semicolons similar to  other languages like C++ and Java.
@@ -113,6 +117,10 @@ for ;i < 10; {
 }
 fmt.Println(i)
 ```
+
+### Passsing by Reference vs Value
+
+In Python, to pass by reference we use mutable objects. Go supports pointers similar to C++. So pointer syntax is used to pass by reference in Go. [https://tour.golang.org/moretypes/1](https://tour.golang.org/moretypes/1)
 
 ### Type Conversion
 
