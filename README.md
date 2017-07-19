@@ -91,6 +91,29 @@ del d["key"]        # Python
 delete(d, "key")    # Go
 ```
 
+### Looping
+
+Python supports `for` an `while` loops. Go only has one looping construct i.e. the `for` loop. Unlike Python, the `for` loop in Go has 3 components separated by semicolons similar to  other languages like C++ and Java.
+
+To create `while` like loops in Go simply omit the `init` and `post` statements and increment/decremtn the control variable within the loop body like a while loop. Example (Python vs Go - While loop):
+
+```
+# Python
+i = 0
+while i < 10:
+    i += 1
+print(i)
+```
+
+```
+// Go
+i := 0
+for ;i < 10; {
+    i += 1
+}
+fmt.Println(i)
+```
+
 ### Type Conversion
 
 Type conversion in Go is very similar to Python. To convert a value `v` to a type `T` in Go, simply call `T(v)`.
