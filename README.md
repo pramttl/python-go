@@ -91,6 +91,16 @@ del d["key"]        # Python
 delete(d, "key")    # Go
 ```
 
+### Type Conversion
+
+Type conversion in Go is very similar to Python. To convert a value `v` to a type `T` in Go, simply call `T(v)`.
+
+```
+// Go
+myint := 2
+mtfloat := float64(i)
+```
+
 ## Advanced
 
 ### Module Exports
@@ -132,6 +142,7 @@ def outer():
 In Go, inner functions have read-write access to outer functions variables.
 
 ```
+// Go
 func outer() {
     n := 1
     inner := func() {
@@ -144,6 +155,11 @@ func outer() {
 
 // Run this and you'd see it prints 2
 ```
+
+### Complex Numbers
+
+Both Go and Python support complex numbers and complex number arithmetic. Go uses `i` for the imaginary part and Python uses `j`.
+
 
 ## Suggestions
 
