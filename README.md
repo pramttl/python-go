@@ -93,6 +93,15 @@ delete(d, "key")    # Go
 
 ## Advanced
 
+### Module Exports
+
+In Python all in the global objects unless prefixed by an `_` are exported by default. Example: If you have a file `hello.py` that defines functions such as `foo` and `bar`. Then if in another file in the same directory you write, `from hello import *` then it will import `foo` and `bar` from the `hello` package.
+
+In Go, a name is exported only if it begins with a capital letter. That's why `fmt.Println` has a capital `P`.
+
+So, in short, exports are implicit in Python and expicitly done in Go.
+
+
 ### Closures (Differences)
 
  In Python, if you write a function (inner) within a function (outer) then, inner has read-only access to variables of outer (Read only access to non-local variables unless they are mutable variables which are passed by reference and can get modified.)
@@ -136,7 +145,6 @@ func outer() {
 // Run this and you'd see it prints 2
 ```
 
-
 ## Suggestions
 
-This README is very loosely written, kind of like personal notes, if you have any suggestions, drop me a note or if you are an expert correct me if I am wrong anywhere via email or sending a PR.
+This README is very loosely written, and may contain errors. These are kind of like personal notes, if you have spotted any errors please do let me know via email or by sending a PR.
