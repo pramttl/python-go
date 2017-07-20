@@ -2,7 +2,7 @@
 
 Note: **Work In Progress**
 
-The goal of this repository is to draw some random language/syntax similarities betwen Python and Go to help get myself and other Python developers get familar with Go. This package does not discuss performance, etc. In each of these cases, the first example is Python example and the second example is the Go example.
+The goal of this repository is to draw some random language/syntax similarities betwen Python and Go to help get myself and other Python developers get familar with Go. This package does not discuss performance, etc. In each of these cases unless stated, the first example is Python example and the second example is the Go example. The notes are rough and may have some errors. PR's with fixes are appreciated.
 
 ### Basic Similarities / Differences
 
@@ -54,7 +54,7 @@ nums := []float64 {1, 2, 3, 4, 5}
 
 #### Slicing
 
-Slicing in Python and Go work the same way.
+Slicing in Python and Go are very similar.
 
 ```python
 pyslice = nums[3:5]
@@ -64,6 +64,18 @@ pyslice = nums[3:5]
 ```go
 goslice := nums[3:5]
 // [4,5]
+```
+
+One subtle difference is Go array slices are always references to the arrays. In Python, when slices are used on the left hand side they represent references and when used on the right hand side they create a copy of the slice of the original list.
+
+```
+# In Python, following creates a copy
+b = a[:]
+```
+
+```
+// In Go, b will still be a reference to a
+b := a[:] 
 ```
 
 ### Hashmaps
